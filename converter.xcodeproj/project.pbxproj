@@ -9,21 +9,37 @@
 /* Begin PBXBuildFile section */
 		00D802AA27B5458900730FF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D802A927B5458900730FF5 /* AppDelegate.swift */; };
 		00D802AC27B5458900730FF5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D802AB27B5458900730FF5 /* SceneDelegate.swift */; };
-		00D802AE27B5458900730FF5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D802AD27B5458900730FF5 /* ViewController.swift */; };
-		00D802B127B5458900730FF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00D802AF27B5458900730FF5 /* Main.storyboard */; };
+		00D802AE27B5458900730FF5 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D802AD27B5458900730FF5 /* LaunchViewController.swift */; };
 		00D802B327B5458A00730FF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00D802B227B5458A00730FF5 /* Assets.xcassets */; };
 		00D802B627B5458A00730FF5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00D802B427B5458A00730FF5 /* LaunchScreen.storyboard */; };
+		00D802BE27B5482300730FF5 /* FirstViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D802BD27B5482300730FF5 /* FirstViewControllerViewModel.swift */; };
+		00D802C027B54AB100730FF5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D802BF27B54AB100730FF5 /* Constants.swift */; };
+		00D802C227B54F2200730FF5 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D802C127B54F2100730FF5 /* FirstViewController.swift */; };
+		00D802C427B5614C00730FF5 /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D802C327B5614C00730FF5 /* Extentions.swift */; };
+		00D802C927B582DA00730FF5 /* belarus.png in Resources */ = {isa = PBXBuildFile; fileRef = 00D802C527B582D900730FF5 /* belarus.png */; };
+		00D802CA27B582DA00730FF5 /* united-states-of-america.png in Resources */ = {isa = PBXBuildFile; fileRef = 00D802C627B582DA00730FF5 /* united-states-of-america.png */; };
+		00D802CB27B582DA00730FF5 /* european-union.png in Resources */ = {isa = PBXBuildFile; fileRef = 00D802C727B582DA00730FF5 /* european-union.png */; };
+		00D802CC27B582DA00730FF5 /* russia.png in Resources */ = {isa = PBXBuildFile; fileRef = 00D802C827B582DA00730FF5 /* russia.png */; };
+		00D802CE27B5833D00730FF5 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D802CD27B5833D00730FF5 /* DataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		00D802A627B5458900730FF5 /* converter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = converter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00D802A927B5458900730FF5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		00D802AB27B5458900730FF5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		00D802AD27B5458900730FF5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		00D802B027B5458900730FF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		00D802AD27B5458900730FF5 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		00D802B227B5458A00730FF5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		00D802B527B5458A00730FF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		00D802B727B5458A00730FF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		00D802BD27B5482300730FF5 /* FirstViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewControllerViewModel.swift; sourceTree = "<group>"; };
+		00D802BF27B54AB100730FF5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		00D802C127B54F2100730FF5 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		00D802C327B5614C00730FF5 /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
+		00D802C527B582D900730FF5 /* belarus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = belarus.png; sourceTree = "<group>"; };
+		00D802C627B582DA00730FF5 /* united-states-of-america.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "united-states-of-america.png"; sourceTree = "<group>"; };
+		00D802C727B582DA00730FF5 /* european-union.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "european-union.png"; sourceTree = "<group>"; };
+		00D802C827B582DA00730FF5 /* russia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = russia.png; sourceTree = "<group>"; };
+		00D802CD27B5833D00730FF5 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +53,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0044AEB227B6C89F00F2EF61 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				00D802C527B582D900730FF5 /* belarus.png */,
+				00D802C727B582DA00730FF5 /* european-union.png */,
+				00D802C827B582DA00730FF5 /* russia.png */,
+				00D802C627B582DA00730FF5 /* united-states-of-america.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		00D8029D27B5458900730FF5 = {
 			isa = PBXGroup;
 			children = (
@@ -56,10 +83,15 @@
 		00D802A827B5458900730FF5 /* converter */ = {
 			isa = PBXGroup;
 			children = (
+				0044AEB227B6C89F00F2EF61 /* Images */,
 				00D802A927B5458900730FF5 /* AppDelegate.swift */,
 				00D802AB27B5458900730FF5 /* SceneDelegate.swift */,
-				00D802AD27B5458900730FF5 /* ViewController.swift */,
-				00D802AF27B5458900730FF5 /* Main.storyboard */,
+				00D802AD27B5458900730FF5 /* LaunchViewController.swift */,
+				00D802C127B54F2100730FF5 /* FirstViewController.swift */,
+				00D802BD27B5482300730FF5 /* FirstViewControllerViewModel.swift */,
+				00D802CD27B5833D00730FF5 /* DataManager.swift */,
+				00D802BF27B54AB100730FF5 /* Constants.swift */,
+				00D802C327B5614C00730FF5 /* Extentions.swift */,
 				00D802B227B5458A00730FF5 /* Assets.xcassets */,
 				00D802B427B5458A00730FF5 /* LaunchScreen.storyboard */,
 				00D802B727B5458A00730FF5 /* Info.plist */,
@@ -127,7 +159,10 @@
 			files = (
 				00D802B627B5458A00730FF5 /* LaunchScreen.storyboard in Resources */,
 				00D802B327B5458A00730FF5 /* Assets.xcassets in Resources */,
-				00D802B127B5458900730FF5 /* Main.storyboard in Resources */,
+				00D802CC27B582DA00730FF5 /* russia.png in Resources */,
+				00D802CB27B582DA00730FF5 /* european-union.png in Resources */,
+				00D802CA27B582DA00730FF5 /* united-states-of-america.png in Resources */,
+				00D802C927B582DA00730FF5 /* belarus.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +173,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00D802AE27B5458900730FF5 /* ViewController.swift in Sources */,
+				00D802C027B54AB100730FF5 /* Constants.swift in Sources */,
+				00D802CE27B5833D00730FF5 /* DataManager.swift in Sources */,
+				00D802BE27B5482300730FF5 /* FirstViewControllerViewModel.swift in Sources */,
+				00D802AE27B5458900730FF5 /* LaunchViewController.swift in Sources */,
+				00D802C227B54F2200730FF5 /* FirstViewController.swift in Sources */,
 				00D802AA27B5458900730FF5 /* AppDelegate.swift in Sources */,
 				00D802AC27B5458900730FF5 /* SceneDelegate.swift in Sources */,
+				00D802C427B5614C00730FF5 /* Extentions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		00D802AF27B5458900730FF5 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				00D802B027B5458900730FF5 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		00D802B427B5458A00730FF5 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -292,11 +324,12 @@
 				DEVELOPMENT_TEAM = T47FCU3CXH;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = converter/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Converter;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -306,7 +339,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -320,11 +353,12 @@
 				DEVELOPMENT_TEAM = T47FCU3CXH;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = converter/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Converter;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -334,7 +368,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
