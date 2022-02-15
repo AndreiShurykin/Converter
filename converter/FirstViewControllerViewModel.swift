@@ -13,11 +13,7 @@ protocol FirstViewControllerViewModelProtocol {
     func isCurrencyChanged(_ firstButtonTitle: String?,_ secondButtonTitle: String?,_ firstCurrentCurrency: String,_ secondCurrentCurrency: String,_ isFirstChanged: @escaping(Bool) -> Void,_ isSecondChanged: @escaping(Bool) -> Void) -> Bool
 }
 
-final class FirstViewControllerViewModel {
-    
-}
-
-extension FirstViewControllerViewModel: FirstViewControllerViewModelProtocol {
+final class FirstViewControllerViewModel: FirstViewControllerViewModelProtocol {
 
     func checkCurrencies(_ firstValue: String?, _ secondValue: String?) -> Bool {
         if currenciesSet.contains(firstValue ?? "Choose a currency") && currenciesSet.contains(secondValue ?? "Choose a currency") {

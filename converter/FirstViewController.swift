@@ -107,9 +107,12 @@ final class FirstViewController: UIViewController {
             }
             secondCurrentCurrency = secondText
             if viewModel.checkCurrencies(firstButton.titleLabel?.text, secondButton.titleLabel?.text) {
-                DataManager.shared.getCurrencyRate(firstButton.titleLabel?.text, secondButton.titleLabel?.text) { result in
+                DataManager.shared.getCurrencyRate(firstButton.titleLabel?.text, secondButton.titleLabel?.text) { [weak self] result in
                     switch result {
                     case .success(let rate):
+                        guard let self = self else {
+                            return
+                        }
                         self.currentRate = rate
                         DispatchQueue.main.async {
                             if didFirstButtonTitleChange {
@@ -204,24 +207,6 @@ final class FirstViewController: UIViewController {
             alertController.dismiss(animated: true, completion: nil)
         }))
         self.present(alertController, animated: true)
-    }
-    
-    private func isCurrencyChanged() -> Bool {
-        if firstButton.titleLabel?.text != firstCurrentCurrency {
-            guard let text = firstButton.titleLabel?.text else {
-                return false
-            }
-            firstCurrentCurrency = text
-            return true
-        } else if secondButton.titleLabel?.text != secondCurrentCurrency {
-            guard let text = secondButton.titleLabel?.text else {
-                return false
-            }
-            secondCurrentCurrency = text
-            return true
-        } else {
-            return false
-        }
     }
     
     private func updateImageView(_ button: UIButton,_ imageView: UIImageView) {
