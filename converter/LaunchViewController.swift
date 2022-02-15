@@ -22,7 +22,7 @@ final class LaunchViewController: UIViewController {
         self.view.backgroundColor = .white
         let secondsToDelay = 2.0
         DispatchQueue.main.asyncAfter(deadline: .now() + secondsToDelay) {
-            let firstViewController = FirstViewController(viewModel: FirstViewControllerViewModel())
+            let firstViewController = FirstViewController()
             self.navigationController?.pushViewController(firstViewController, animated: true)
         }
     }
