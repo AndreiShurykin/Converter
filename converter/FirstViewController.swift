@@ -13,6 +13,10 @@ class FirstViewController: UIViewController {
     private var firstCurrentCurrency = ""
     private var secondCurrentCurrency = ""
     
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+    
     private let firstImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "flag.png")
@@ -60,10 +64,6 @@ class FirstViewController: UIViewController {
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
-    
-    override var prefersStatusBarHidden: Bool {
-        return true
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -136,7 +136,6 @@ extension FirstViewController: SecondViewControllerDelegate {
         DispatchQueue.main.async {
             self.firstTextFieldDidChange()
         }
-        print(currentRate)
     }
     
     func setFirstCurrency(_ value: String) {

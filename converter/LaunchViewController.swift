@@ -43,18 +43,14 @@ final class LaunchViewController: UIViewController {
         appNameLabel.textColor = .black
         appNameLabel.textAlignment = .center
         appNameLabel.translatesAutoresizingMaskIntoConstraints = false
-        guard let appName = Bundle.main.infoDictionary?["CFBundleDisplayName" as String] as? String else {
-            return
-        }
+        guard let appName = Bundle.main.infoDictionary?["CFBundleDisplayName" as String] as? String else { return }
         appNameLabel.text = appName
         
         appVersionLabel.adjustsFontSizeToFitWidth = true
         appVersionLabel.textColor = .black
         appVersionLabel.textAlignment = . center
         appVersionLabel.translatesAutoresizingMaskIntoConstraints = false
-        guard let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String else {
-            return
-        }
+        guard let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String else { return }
         appVersionLabel.text = "Version " + appVersion
         
         self.view.addSubview(authorNameLabel)
@@ -78,6 +74,5 @@ final class LaunchViewController: UIViewController {
         appVersionLabel.topAnchor.constraint(equalTo: authorNameLabel.topAnchor).isActive = true
         appVersionLabel.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
     }
-
 }
 

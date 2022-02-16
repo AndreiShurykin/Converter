@@ -20,6 +20,10 @@ final class SecondViewController: UIViewController {
     var firstCurrentCurrency = ""
     var secondCurrentCurrency = ""
     
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+    
     let firstImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -68,49 +72,27 @@ final class SecondViewController: UIViewController {
         return button
     }()
     
-    override var prefersStatusBarHidden: Bool {
-        return true
-    }
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        if firstCurrentCurrency != "" {
-            firstButton.setTitle(firstCurrentCurrency, for: .normal)
-        }
-        if secondCurrentCurrency != "" {
-            secondButton.setTitle(secondCurrentCurrency, for: .normal)
-        }
+        checkButtonsTitle()
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         setupViews()
         if DataManager.shared.isCurrencyChanged(firstButton.titleLabel?.text, secondButton.titleLabel?.text, firstCurrentCurrency, secondCurrentCurrency) {
-            guard let firstText = firstButton.titleLabel?.text else {
-                return
-            }
-            guard let secondText = secondButton.titleLabel?.text else {
-                return
-            }
+            guard let firstText = firstButton.titleLabel?.text else { return }
+            guard let secondText = secondButton.titleLabel?.text else { return }
             firstCurrentCurrency = firstText
             secondCurrentCurrency = secondText
             if DataManager.shared.checkCurrencies(firstButton.titleLabel?.text, secondButton.titleLabel?.text) {
-                DataManager.shared.getCurrencyRate(firstButton.titleLabel?.text, secondButton.titleLabel?.text) { [weak self] result in
-                    switch result {
-                    case .success(let rate):
-                        guard let self = self else {
-                            return
-                        }
-                        self.secondViewControllerDelegate?.setCurrentRate(rate)
-                    case .failure(_):
-                        print("Error")
-                    }
+                DataManager.shared.getCurrencyRate(firstCurrentCurrency, secondCurrentCurrency) { [weak self] value, error  in
+                    guard let value = value else { return }
+                    self?.secondViewControllerDelegate?.setCurrentRate(value)
                 }
             }
         }
-
     }
     
     @objc private func firstButtonPressed(sender: UIButton) {
@@ -162,32 +144,26 @@ final class SecondViewController: UIViewController {
     
     private func showAlertController(_ sender: UIButton,_ imageView: UIImageView) {
         let alertController = UIAlertController(title: "Choose a currency", message: nil, preferredStyle: .actionSheet)
-        alertController.addAction(UIAlertAction(title: byn, style: .default, handler: { (_) in
-            sender.setTitle(byn, for: .normal)
-            self.updateImageView(sender, imageView)
-        }))
-        alertController.addAction(UIAlertAction(title: eur, style: .default, handler: { (_) in
-            sender.setTitle(eur, for: .normal)
-            self.updateImageView(sender, imageView)
-        }))
-        alertController.addAction(UIAlertAction(title: rub, style: .default, handler: { (_) in
-            sender.setTitle(rub, for: .normal)
-            self.updateImageView(sender, imageView)
-        }))
-        alertController.addAction(UIAlertAction(title: usd, style: .default, handler: { (_) in
-            sender.setTitle(usd, for: .normal)
-            self.updateImageView(sender, imageView)
-        }))
-        alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (_) in
-            alertController.dismiss(animated: true, completion: nil)
-        }))
+        currenciesSet.forEach { currency in
+            alertController.addAction(UIAlertAction(title: currency, style: .default, handler: { (_) in
+                sender.setTitle(currency, for: .normal)
+                self.updateImageView(sender, imageView)
+            }))
+        }
         self.present(alertController, animated: true)
     }
     
     private func updateImageView(_ button: UIButton,_ imageView: UIImageView) {
-        guard let text = button.titleLabel?.text else {
-            return
-        }
+        guard let text = button.titleLabel?.text else { return }
         imageView.image = UIImage(named: DataManager.shared.getImageName(text))
+    }
+    
+    private func checkButtonsTitle() {
+        if firstCurrentCurrency != "" {
+            firstButton.setTitle(firstCurrentCurrency, for: .normal)
+        }
+        if secondCurrentCurrency != "" {
+            secondButton.setTitle(secondCurrentCurrency, for: .normal)
+        }
     }
 }
